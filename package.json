@@ -1,0 +1,25 @@
+{
+  "name": "jest_another_rpg",
+  "version": "1.0.0",
+  "description": "Bootcamp OOP and TDD lesson",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plainjane99/Jest_Another_RPG.git"
+  },
+  "keywords": [
+    "OOP"
+  ],
+  "author": "Jane Hsu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plainjane99/Jest_Another_RPG/issues"
+  },
+  "homepage": "https://github.com/plainjane99/Jest_Another_RPG#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
