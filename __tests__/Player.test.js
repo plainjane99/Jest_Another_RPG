@@ -13,7 +13,8 @@ const Player = require('../lib/Player');
 
 
 // ============================= test code goes here ============================== //
-// ===== player test code goes here ===== //
+
+// ========== player object test code goes here ========== //
 // we want the player object to have four properties
 // name, health, strength, agility
 // we will write a test for the existence of these four properties
@@ -36,8 +37,34 @@ test('creates a player object', () => {
         expect.arrayContaining([expect.any(Object)])
     );
 });
+// ========== player object test code ends here ========== //
 
-// ===== player test code goes here ===== //
+// ========== player stats object test code goes here ========== //
+test("gets player's stats as an object", () => {
+    const player = new Player('Dave');
+
+    // checking that player.getStats() returns an object with four specific properties
+    expect(player.getStats()).toHaveProperty('potions');
+    expect(player.getStats()).toHaveProperty('health');
+    expect(player.getStats()).toHaveProperty('strength');
+    expect(player.getStats()).toHaveProperty('agility');
+})
+// ========== player stats object test code ends here ========== //
+
+// ========== player inventory test code goes here ========== //
+test('gets inventory from player or returns false', () => {
+    const player = new Player('Dave');
+
+    // on player creation, the inventory should already have something in it
+    // so a call to player.getInventory should return an array
+    expect(player.getInventory()).toEqual(expect.any(Array));
+
+    // sets an empty array to test that an empty inventory will return false
+    player.inventory = [];
+    // an empty inventory needs to return false
+    expect(player.getInventory()).toEqual(false);
+});
+// ========== player inventory test code ends here ========== //
 
 // ===== mock potion test code goes here ===== //
 console.log(new Potion());
